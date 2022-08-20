@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Infinity Sound Recognition</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+
+    <div class="container">
+        <div class="header-img">
+            <img src="../images/logoblak.png" ;>
+            <h2>Sound Recognition</h2>
+        </div>
+        <div class="form">
+            <div class="sign-in-section">
+                <h1>LOGIN</h1>
+                <form action="/speech_translation">
+                    <div class="form-field">
+                        <label for="username">Username</label>
+                        <input id="username" type="username" placeholder="Username" />
+                    </div>
+                    <div class="form-field">
+                        <label for="password">Password</label>
+                        <input id="password" type="password" placeholder="Password" />
+                    </div>
+                    <div class="form-options">
+                        <div class="checkbox-field">
+                            <input id="rememberMe" type="checkbox" class="checkbox" />
+                            <label for="rememberMe">Remember Me</label>
+                        </div>
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                    <div class="form-field">
+                        <input type="submit" class="btn btn-signin" value="Submit" onclick="javascript:validate()" / />
+                    </div>
+                </form>
+                <div class="links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function validate() {
+            if (document.getElementById("username").value == "user" &&
+                document.getElementById("password").value == "password") {
+                location.href = "speech_translation";
+            } else {
+                alert("validation failed");
+                location.href = "fail.html";
+            }
+        }
+    </script>
+
+</html>
